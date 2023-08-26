@@ -18,14 +18,14 @@
   - make a scene_map class that loads data from a json file as the map data to  the map base class  and handles it.
 
   ### **Event**
-     - Make a base event with potential controllors for:
+   - Make a base event with potential controllors for:
       - Movement
       - Combat
       - Decisions/Action
-     - Various kinds of events
+   - Various kinds of events
        - NPC
        - Conditionally triggered event commands
-     - Base Event has an Array that tells it to move it has a move command inside it.
+- Base Event has an Array that tells it to move it has a move command inside it.
        - Move Controller handles the logic on how it gets around.
      - Have the ability to multiple pages of event commands that can be set to different pages with an array of booleans or numbers.
   
