@@ -2,12 +2,12 @@ from utilities.tile import Tile
 from utilities.spritesheet import SpriteSheet
 class Tileset():
     def __init__(self,image,settings):
-        # settings: {rows:number, columns:number, metadata: list[list[tile:int, passable:boolean, typenum:int]]}
+        # settings: {rows:number, columns:number, metadata: list[list[tile:int, impassable:boolean, typenum:int]]}
         self.image = image
         self.rows:int = settings['rows']
         self.columns:int = settings['columns']
         self.colorkey = settings['colorkey']
-        self.metadata:list[list[int,int,int]] = settings["metadata"]
+        self.metadata:list[list[int,bool,int]] = settings["metadata"]
         self.tiles:list[Tile] = []
         self.load_tiles()
     
