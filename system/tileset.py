@@ -8,14 +8,14 @@ class Tileset():
         with open("../data/maps/tilesets/{name}.json") as json_file:
             settings = json.load(json_file)
             print(settings)
-        self.image = SpriteSheet('../data/graphics/tilesets/{name}.png')
+        self.image:SpriteSheet = SpriteSheet('../data/graphics/tilesets/{name}.png')
         self.rows:int = settings['rows']
         self.columns:int = settings['columns']
         self.metadata:list[list[int,bool,int]] = settings["metadata"]
         self.tiles:list[Tile] = []
-        self.load_tiles()
+        self.__load_tiles()
     
-    def load_tiles(self):
+    def __load_tiles(self):
         width, height = self.image.sprite_sheet.get_size()
         pxWidth, pxHeight = width/self.columns, height/self.rows
         for colNum in self.columns:
