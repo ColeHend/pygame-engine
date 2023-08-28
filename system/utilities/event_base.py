@@ -15,7 +15,6 @@ class Event_Base():
         self.settings = settings;
     
     def __getImage(self, anim_index:int, frameNumber:int = 4):
-        theState:str = self.currentState.__str__();
         width, height = self.image.sprite_sheet.get_size()
         pxwidth, pxheight = width/frameNumber, height/frameNumber
 
